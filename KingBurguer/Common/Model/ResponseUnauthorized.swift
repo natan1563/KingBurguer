@@ -1,0 +1,27 @@
+//
+//  ResponseUnauthorized.swift
+//  KingBurguer
+//
+//  Created by Natã Romão on 02/05/23.
+//
+
+import Foundation
+
+struct ResponseUnauthorized: Decodable {
+    
+    let detail: ResponseDetail
+    
+    enum CodingKeys: String, CodingKey {
+        case detail
+    }
+    
+}
+
+struct ResponseDetail: Decodable {
+    
+    let message: String
+    
+    enum CodingKeys: String, CodingKey {
+        case message
+    }
+}
